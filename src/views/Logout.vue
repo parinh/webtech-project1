@@ -1,5 +1,5 @@
 <template>
-  <h1>aaaaaaaaaaaaaaaa</h1>
+  <h2>kdkfkasdfadf</h2>
 </template>
 
 <script>
