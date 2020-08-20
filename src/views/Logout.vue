@@ -1,5 +1,5 @@
 <template>
-    <h1>สมัคร user</h1>
+  
 </template>
 
 <script>

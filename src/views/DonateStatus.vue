@@ -1,5 +1,5 @@
 <template>
-    <h1>สมัคร user</h1>
+  <h1> ดูข้อมูลบริจาค</h1>
 </template>
 
 <script>
