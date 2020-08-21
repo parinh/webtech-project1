@@ -32,10 +32,15 @@
 
 <script>
 
-import {mapState} from 'vuex'
+// import {mapState} from 'vuex'
 export default {
     computed:{
-        ...mapState ('account', ['user'])
+        // ...mapState ('account', ['user'])
+    },
+    data() {
+        return {
+            user: false
+        }
     }
 
 }
