@@ -1,12 +1,8 @@
 <template>
   <div>
-      <h1>Opening Donate List</h1>
+      <h1>Donate List</h1>
       <div>
-      <label>New Todo:</label>
-      <input type="text" v-model="new_todo.name">
-      <label>Priority</label>
-      <input type="number" min="0" max="3" v-model="new_todo.priority">
-      <button class="btn btn-primary" @click="addTodo()">Add</button>
+      
     </div>
 
     <table class="table">
