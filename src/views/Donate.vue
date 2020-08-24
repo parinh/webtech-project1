@@ -8,33 +8,31 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Todo name</th>
-          <th>Completed?</th>
-          <th>Priority</th>
-          <th>Timestamp</th>
+          <th>name</th>
+          <th>type</th>
+          <th>volume</th>
+          <th>phone number</th>
+          <th>address</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="todo in todos" :key="todo.id">
+        <tr v-for="openingdonate in openingdonate" :key="openingdonate.id">
           <td>
-            {{ todo.name }}
-            <button v-if="todo.completed" @click="deleteTodo(todo)" class="btn btn-danger">
-              Delete
-            </button>
+            {{ openingdonate.name }}
           </td>
           <td>
-            {{ todo.completed }}
-            <button v-if="!todo.completed" @click="finishTodo(todo)">
-              Finish
-            </button>
+            {{ openingdonate.type }}
           </td>
-          <td>{{ todo.priority }}</td>
-          <td v-if="!todo.completed">
-            Created At: {{ new Date(todo.createdAt.seconds * 1000) }}
+          <td>
+              {{ openingdonate.volume }}
           </td>
-          <td v-else>
-            Completed At: {{ new Date(todo.completedAt.seconds * 1000) }}
+          <td>
+              {{ openingdonate.tel }}
           </td>
+          <td>
+              {{ openingdonate.address }}
+          </td>
+          
         </tr>
       </tbody>
     </table>

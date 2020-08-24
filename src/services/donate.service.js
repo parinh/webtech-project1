@@ -5,7 +5,8 @@ function create(data){
         name: data.name,
         tel: data.tel,
         type: data.type,
-        volume: parseInt(data.volume)
+        volume: parseInt(data.volume),
+        address: data.address
     })
 }
 
