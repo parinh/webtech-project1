@@ -65,7 +65,7 @@ const actions = { //สร้างการทำงานนบางอย่
         userService.login(email,password) //ทำงาน login ใน userservice จะทำตาม if else ข้างล่าง
         .then (user=>{
             commit('loginSuccess', user) //mutation login success จะทำงานให้เปลี่ยนสถานะเป็น loginSuccess
-            router.push({name: 'Home'})
+            router.push({name: 'UserHome'})
         })
 
         .catch (error => {

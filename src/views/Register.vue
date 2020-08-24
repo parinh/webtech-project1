@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-      <h1>Register</h1>
+      <h1 class="text-center col mt-4 mb-4">Register</h1>
 
       <form @submit.prevent="handleSubmit()">
           <div class = "form-group row">
@@ -14,7 +14,7 @@
               </div>   
           </div>
 
-          
+
           <div class="form-group row">
               <div class="col-sm-2">
               <label for="">Password * </label>

@@ -3,9 +3,7 @@
 
     <menu-bar></menu-bar>
 
-    <div v-if="alert.message" :class="`alert ${alert.type}`">
-      {{ alert.message }}
-    </div>
+    
 
     <router-view></router-view>
     

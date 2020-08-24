@@ -11,8 +11,11 @@
       <li class="nav-item active">
         <router-link to="/" class="nav-link">Home</router-link>
       </li>
-      <li class="nav-item">
-        <router-link to="/about" class="nav-link">About</router-link>
+      <li class="nav-item active">
+        <router-link to="/Donate" class="nav-link">Donate List</router-link>
+      </li>
+      <li class="nav-item" v-if="user">
+        <router-link to="/UserHome" class="nav-link">UserHome</router-link>
       </li>
       <li class="nav-item" v-if="user"> 
         <router-link to="/logout" class="nav-link">Logout</router-link>
