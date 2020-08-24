@@ -15,3 +15,4 @@
 npm install vuex
 npm install vuefire
 npm install firebase
+npm remove @vue/cli-plugin-eslint
