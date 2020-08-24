@@ -1,22 +1,48 @@
 <template>
-  <div>
-      <h1> Register</h1>
+  <div class="container">
+      <h1>Register</h1>
 
       <form @submit.prevent="handleSubmit()">
-          <div class = "form-group">
-              <label for="">Email Address * </label>
-              <input type="text" class="form-control"
-                    placeholder="Your Email" v-model="form.email">
+          <div class = "form-group row">
+              <div class="col-sm-2">
+                  <label for="">Email Address * </label>
+              </div>
+              
+              <div class="col-sm-10">
+                  <input type="text" class="form-control"
+                        placeholder="Your Email" v-model="form.email">
+              </div>   
           </div>
-          <div class="form-group">
+
+          
+          <div class="form-group row">
+              <div class="col-sm-2">
               <label for="">Password * </label>
+              </div>
+
+              <div class="col-sm-10">
               <input type="password" class="form-control"
                     placeholder="Your Password" v-model="form.password">
+              </div>
           </div>
-          <div class="form-group">
+          <div class="form-group row">
+              <div class="col-sm-2">
               <label for="">Display Name *</label>
+              </div>
+
+              <div class="col-sm-10">
               <input type="text" class="form-control"
                 placeholder="Your Name" v-model="form.displayName">
+              </div>
+          </div>
+          <div class="form-group row">
+              <div class="col-sm-2">
+              <label for="">Phone Number*</label>
+              </div>
+              <div class="col-sm-10">
+              <input type="text" class="form-control"
+                placeholder="Your Phone Number" v-model="form.phoneNumber">
+              </div>
           </div>
           <div class="form-group">
               <button class="btn btn-primary">
@@ -28,7 +54,7 @@
 </template>
 
 <script>
-import {mapState,mapAction, mapActions} from 'vuex'
+import {mapState, mapActions} from 'vuex'
 
 export default {
     data(){
@@ -36,7 +62,8 @@ export default {
             form:{
                 email: '',
                 password: '',
-                displayName: ''
+                displayName: '',
+                phoneNumber: ''
             }
         }
     },
@@ -44,7 +71,7 @@ export default {
         ...mapActions('account',['register']),
         ...mapActions('alert',['error']),
         handleSubmit(){
-            if (this.form.email && this.form.password && this.form.displayName){
+            if (this.form.email && this.form.password && this.form.displayName && this.form.phoneNumber){
                 this.register(this.form)
             }else{
                 this.error("ใส่ให้ครบ")

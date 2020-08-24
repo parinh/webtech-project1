@@ -14,9 +14,6 @@
       <li class="nav-item">
         <router-link to="/about" class="nav-link">About</router-link>
       </li>
-      <li class="nav-item">
-        <router-link to="/todo" class="nav-link">Todo</router-link>
-      </li>
       <li class="nav-item" v-if="user"> 
         <router-link to="/logout" class="nav-link">Logout</router-link>
       </li>
@@ -32,16 +29,11 @@
 
 <script>
 
-// import {mapState} from 'vuex'
+ import {mapState} from 'vuex'
 export default {
     computed:{
-        // ...mapState ('account', ['user'])
+         ...mapState ('account', ['user'])
     },
-    data() {
-        return {
-            user: false
-        }
-    }
 
 }
 </script>

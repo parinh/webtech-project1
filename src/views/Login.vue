@@ -1,26 +1,43 @@
 <template>
-  <div>
-      <h1>Login</h1>
+  <div class="container">
+      <h1 class="text-center col mt-4 mb-4">Login</h1>
 
       <form @submit.prevent="handleSubmit()">
-          <div class="form-group">
-              <label for="">Email Adress * </label>
+
+        
+          <div class = "form-group row">
+              <div class="col-sm-2">
+              <label for="">Email Address * </label>
+              </div>
+            
+            <div class="col-sm-10">
               <input type="text" class="form-control"
                 placeholder="Your Email" v-model="form.email">
           </div>
+          </div>
 
-          <div class="form-group">
+          <div class="form-group row">
+              <div class="col-sm-2">
               <label for="">Password * </label>
+              </div>
+
+              <div class="col-sm-10">
               <input type="password" class="form-control"
                 placeholder="Your Password" v-model="form.password">
           </div>
+          </div>
 
-          <div class="form group">
+          <div class="form group row">
+              <div class="col-sm-2">
               <button class="btn btn-primary">Login</button>
+              </div>
+            
+            <div class="col-sm-10">
               <router-link :to="{name: 'Register'}"
                     class="btn btn-link">
                     Register
               </router-link>
+            </div>
           </div>
       </form>
   </div>

@@ -19,7 +19,8 @@ function register(user) {
     .createUserWithEmailAndPassword(user.email, user.password)
     .then(data =>{
         data.user.updateProfile({
-            displayName: user.displayName
+            displayName: user.displayName,
+            phoneNumber: user.phoneNumber
         })
         return data.user
     })

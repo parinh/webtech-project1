@@ -1,5 +1,5 @@
-import{userService} from '../services/user.service'
-import{router} from '../routes'
+import {userService} from '../services/user.service'
+import {router} from '../router'
 
 const user = JSON.parse(localStorage.getItem('user')) //ใช้งานเมื่อ log in ผ่าน มันจะเก็บข้อมูล getItem(user) จาก local storage แล้วก็ให้สถานะเริ่มต้น
 const state = user
@@ -45,7 +45,7 @@ const actions = { //สร้างการทำงานนบางอย่
     register({ dispatch,commit}, user){ //dispatch,commit ข้อมูลของ user จะใช้อันไหนก็ใส่อันนั้น dispatch,commit อะ
         commit('registerRequest') // commit ใช้เรียก mutations ของตัวเอง
 
-        userService.register(user)
+        userService.register(user) //ส่ง user ไป function ของ userService
         .then(user =>{
             commit('registerSuccess')
             router.push ({name: 'Login'})

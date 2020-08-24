@@ -2,6 +2,11 @@
   <div id="app">
 
     <menu-bar></menu-bar>
+
+    <div v-if="alert.message" :class="`alert ${alert.type}`">
+      {{ alert.message }}
+    </div>
+
     <router-view></router-view>
     
   </div>
@@ -9,33 +14,27 @@
 
 <script>
 import MenuBar from './components/MenuBar.vue'
+import {mapState,mapActions} from 'vuex'
 export default {
-  components : {
+  name: 'app',
+  computed:{
+    ...mapState({
+      alert: state => state.alert
+    })
+  },
 
+  methods:{
+    ...mapActions({
+      clearAlert: 'alert/clear'
+    })
+  },
+
+  components : {
     MenuBar
   },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
