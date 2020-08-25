@@ -8,6 +8,7 @@ import Login from "../views/Login";
 import Logout from "../views/Logout";
 import Register from "../views/Register";
 import UserHome from "../views/UserHome";
+import Total from "../views/Total";
 
 
 Vue.use(VueRouter);
@@ -52,6 +53,11 @@ const routes = [
     path: "/UserHome",
     name: "UserHome",
     component: UserHome
+  },
+  {
+    path: "/Total",
+    name: "Total",
+    component: Total
   },
 ];
 

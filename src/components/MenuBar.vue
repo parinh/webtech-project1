@@ -14,6 +14,9 @@
       <li class="nav-item active">
         <router-link to="/Donate" class="nav-link">Donate List</router-link>
       </li>
+      <li class="nav-item active">
+        <router-link to="/Total" class="nav-link">Total</router-link>
+      </li>
       <li class="nav-item" v-if="user">
         <router-link to="/UserHome" class="nav-link">UserHome</router-link>
       </li>
