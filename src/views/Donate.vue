@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="openingdonate in openingdonate" :key="openingdonate.id">
+        <tr v-for="openingdonate in openingdonates" :key="openingdonate.id">
           <td>
             {{ openingdonate.name }}
           </td>
@@ -40,51 +40,21 @@
 </template>
 
 <script>
-import { todosCollection } from '../firebase'
+import { openingdonate } from '../firebase'
 
 export default {
-  data() {
-    return {
-      todos: [],
-      new_todo: {
-        name: '',
-        priority: 0
-      }
-    }
-  },
+    data() {
+       return {
+           openingdonates: []
+       } 
+    },
   firestore() {
     return {
-      todos: todosCollection.orderBy('priority', 'desc')
-    }
-  },
-  methods: {
-    addTodo() {
-      if (this.new_todo.name != '') {
-        todosCollection.add({
-          name: this.new_todo.name,
-          priority: parseInt(this.new_todo.priority),
-          completed: false,
-          createdAt: new Date()
-        })
-      }
-      this.new_todo = {
-        name: '',
-        priority: 0
-      }
-    },
-
-    finishTodo(todo) {
-      // asynchronous language / non-blocking io
-      todo.completed = true
-      todo.completedAt = new Date()
-      todosCollection.doc(todo.id).update( { ...todo } )
-    },
-
-    deleteTodo(todo) {
-      todosCollection.doc(todo.id).delete()
+      todos: openingdonateCollection.orderBy('desc')
     }
   },
 }
+
 </script>
 
 <style>

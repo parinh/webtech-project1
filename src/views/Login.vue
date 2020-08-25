@@ -63,7 +63,10 @@ export default {
         handleSubmit(event){ //action เวลากดปุ่ม //หน้า form ข้างบนก็ใส่
             if (this.form.email && this.form.password){ //เช็คว่าในฟอร์มมีข้อมูลไหม
                 this.login(this.form) // เรียกให้ไป login ที่ account module โดยส่งข้อมูล form ไปปป ส่งค่าเดียวเพราะมันส่งเป็น object
-
+            }
+            else{
+                this.error('ใส่ให้ครบ')
+                
             }
             
         }
