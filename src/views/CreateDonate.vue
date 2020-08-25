@@ -31,7 +31,7 @@
               </div>
 
               <div class="col-sm-10">
-              <select multiple class="form-control" placeholder="Choose your type" v-model="form.type">
+              <select class="form-control" placeholder="Choose your type" v-model="form.type">
                 <option>หน้ากากอนามัย</option>
                 <option>เสื้อผ้า</option>
                 <option>อาหาร</option>
@@ -80,7 +80,7 @@ export default {
                 tel: '',
                 type: '',
                 volume: '',
-                address:''
+                address:'',
             }
         }
     },
@@ -89,9 +89,10 @@ export default {
         ...mapActions('alert', ['error', 'success']),
         handleSubmit(){
             if (this.form.name && this.form.tel && this.form.type && this.form.volume && this.form.address){
-                donateService.create(this.form).then((data) => {
+                donateService.create(this.form).then((data) => {                 
                     router.push({ name: 'Donate' })
                     this.success('สำเร็จ')
+
                 }).catch(error => {
                     this.error(error.message)
                 })

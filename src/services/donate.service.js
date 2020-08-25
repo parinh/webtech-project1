@@ -6,12 +6,17 @@ function create(data){
         tel: data.tel,
         type: data.type,
         volume: parseInt(data.volume),
-        address: data.address
+        address: data.address,
+        createdAt: new Date()       
     })
 }
 
+
+
+
+
 export const donateService = {
-  create
+  create,
 }
 
 

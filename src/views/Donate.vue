@@ -4,7 +4,6 @@
       <div>
       
     </div>
-
     <table class="table">
       <thead>
         <tr>
@@ -16,21 +15,21 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="openingdonate in openingdonates" :key="openingdonate.id">
+        <tr v-for="donate in openingdonate" :key="donate.id">
           <td>
-            {{ openingdonate.name }}
+            {{ donate.name }}
           </td>
           <td>
-            {{ openingdonate.type }}
+            {{ donate.type }}
           </td>
           <td>
-              {{ openingdonate.volume }}
+              {{ donate.volume }}
           </td>
           <td>
-              {{ openingdonate.tel }}
+              {{ donate.tel }}
           </td>
           <td>
-              {{ openingdonate.address }}
+              {{ donate.address }}
           </td>
           
         </tr>
@@ -40,19 +39,26 @@
 </template>
 
 <script>
-import { openingdonate } from '../firebase'
+import { openingdonateCollection } from '../firebase'
 
 export default {
     data() {
        return {
-           openingdonates: []
+           openingdonate: [],
        } 
     },
-  firestore() {
-    return {
-      todos: openingdonateCollection.orderBy('desc')
+    created(){
+        openingdonateCollection.orderBy('createdAt').get().then(data => {
+            data.forEach(doc =>{
+                console.log(doc.id, " => ", doc.data());
+                this.openingdonate.push({
+                    id: doc.id,
+                    ...doc.data()
+                })
+            })
+        })
     }
-  },
+
 }
 
 </script>
