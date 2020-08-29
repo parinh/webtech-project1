@@ -32,6 +32,13 @@ export default {
   components : {
     MenuBar
   },
+
+  watch: {
+    $route (to ,from){
+      this.clearAlert()
+    }
+  }
+
 }
 </script>
 

@@ -50,7 +50,6 @@ export default {
     created(){
         openingdonateCollection.orderBy('createdAt').get().then(data => {
             data.forEach(doc =>{
-                console.log(doc.id, " => ", doc.data());
                 this.openingdonate.push({
                     id: doc.id,
                     ...doc.data()
