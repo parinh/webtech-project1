@@ -1,6 +1,6 @@
 <template>
   <div class="font-Mitr">
-      <h1 class="text-center">Donate Information</h1>
+      <h1 class="text-center col mt-4 mb-4">รายการบริจาคสิ่งของ</h1>
       <div>
 
         <div>
