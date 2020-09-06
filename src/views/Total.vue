@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
-      <div class="font-Item" id="table">
+      <div id="table">
         <h1 class="text-center col mt-4 mb-4">ยอดคงเหลือคลัง</h1>
         <table class="table">
       <thead>
         <tr>
-          <th>name</th>
-          <th>volume</th>
+          <th>ชนิดสิ่งของ</th>
+          <th>จำนวนคงคลัง</th>
         </tr>
       </thead>
       <tbody>
@@ -48,11 +48,9 @@ created(){
     data.forEach( doc => {
       this.donatorList.push(doc.data())
     })
-
   })
         openingdonateCollection.orderBy('createdAt').get().then(data => {
           let dataSet = []
-
             data.forEach(doc =>{
                 let hasSet = dataSet.filter((item) => {
                   return item.name == doc.data().type;
@@ -66,11 +64,8 @@ created(){
                   let key = Object.keys(dataSet).filter((item) => {
                   return dataSet[item].name == doc.data().type;
                   })[0];
-
-
                   dataSet[key].sumary = dataSet[key].sumary - doc.data().volume;
                 }
-
                 this.openingdonate.push({
                     id: doc.id,
                     ...doc.data()
@@ -83,19 +78,13 @@ created(){
               })[0];
             dataSet[key].sumary = (dataSet[key].sumary + list.volume);
             
-
           })
           this.dataSummanry = dataSet;
-
-
         })
-
-
     },
     
 }
 </script>
 
 <style>
-
 </style>
