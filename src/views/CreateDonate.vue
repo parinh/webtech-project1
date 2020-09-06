@@ -5,7 +5,7 @@
      <form @submit.prevent="handleSubmit()">
           <div class = "form-group row">
               <div class="col-sm-2">
-                  <label for="">Name * </label>
+                  <label for="">ชื่อ * </label>
               </div>
               
               <div class="col-sm-10">
@@ -17,7 +17,7 @@
 
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Phone Number * </label>
+              <label for="">เบอร์โทร * </label>
               </div>
 
               <div class="col-sm-10">
@@ -27,11 +27,12 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">type *</label>
+              <label for="">ชนิด *</label>
               </div>
 
               <div class="col-sm-10">
-              <select class="form-control" placeholder="Choose your type" v-model="form.type">
+                <select class="form-control" placeholder="Choose your type" v-model="form.type" >
+                <option value="" selected disabled hidden>กรุณาเลือกประเภท</option>
                 <option>หน้ากากอนามัย</option>
                 <option>เสื้อผ้า</option>
                 <option>อาหาร</option>
@@ -42,7 +43,7 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Volume</label>
+              <label for="">จำนวน</label>
               </div>
               <div class="col-sm-10">
               <input type="text" class="form-control"
@@ -51,7 +52,7 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Address</label>
+              <label for="">ที่อยู่</label>
               </div>
               <div class="col-sm-10">
               <input type="text" class="form-control"
@@ -60,7 +61,7 @@
           </div>
           <div class="form-group">
               <button type="submit" class="btn btn-primary">
-                  submit
+                  เสร็จสิ้น
               </button>
           </div>
     </form>
@@ -86,7 +87,6 @@ export default {
             }
         }
     },
-<<<<<<< HEAD
     methods:{
     
         ...mapActions('alert', ['error', 'success']),
@@ -105,9 +105,8 @@ export default {
                 this.error("ข้อมูลไม่ครบถ้วน หรือข้อมูลไม่ถูกต้อง")
             }
     
-=======
->>>>>>> eeeb4afbcbd306be76735519ea9cb13c9318d22e
-
+        }
+}
 }
     
 </script>

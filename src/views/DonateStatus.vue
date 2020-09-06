@@ -10,10 +10,10 @@
     <table class="table">
       <thead>
         <tr>
-          <th>name</th>
-          <th>type</th>
-          <th>volume</th>
-          <th>phone number</th>
+          <th>ชื่อผู้บริจาค</th>
+          <th>ชนิด</th>
+          <th>จำนวน</th>
+          <th>เบอร์โทร</th>
         </tr>
       </thead>
       <tbody>

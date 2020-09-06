@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-      <h1 class="text-center col mt-4 mb-4">Register</h1>
+      <h1 class="text-center col mt-4 mb-4">สมัครสมาชิก</h1>
 
       <form @submit.prevent="handleSubmit()">
           <div class = "form-group row">
               <div class="col-sm-2">
-                  <label for="">Email Address * </label>
+                  <label for="">อีเมล * </label>
               </div>
               
               <div class="col-sm-10">
@@ -17,7 +17,7 @@
 
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Password * </label>
+              <label for="">รหัสผ่าน * </label>
               </div>
 
               <div class="col-sm-10">
@@ -27,7 +27,7 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Display Name *</label>
+              <label for="">ชื่อ *</label>
               </div>
 
               <div class="col-sm-10">
@@ -37,7 +37,7 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Phone Number*</label>
+              <label for="">เบอร์โทร *</label>
               </div>
               <div class="col-sm-10">
               <input type="text" class="form-control"
@@ -46,7 +46,7 @@
           </div>
           <div class="form-group">
               <button class="btn btn-primary">
-                  Register
+                  สมัครสมาชิก
               </button>
           </div>
       </form>

@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
-      <div class="font-Itim" id="table">
-        <h1 class="text-center">แสดงยอดคงเหลือที่ต้องการบริจาคของทุก type</h1>
+      <div class="font-Iteim" id="table">
+        <h1 class="text-center">ยอดคงเหลือคลัง</h1>
         <table class="table">
       <thead>
         <tr>
-          <th>name</th>
-          <th>volume</th>
+          <th>ชนิดสิ่งของ</th>
+          <th>จำนวน</th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +24,7 @@
       </tbody>
     </table>
     </div>
+<div style="color: red">**จำนวนติดลบ = ยอดจำนวนบริจาคที่ต้องการ</div>
   </div>
   
 

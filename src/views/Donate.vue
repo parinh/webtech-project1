@@ -1,15 +1,15 @@
 <template>
-    </div>
+    <div>
         <section class="split-1">
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">
             <thead>
                 <tr>
-                <th>name</th>
-                <th>type</th>
-                <th>volume</th>
-                <th>phone number</th>
-                <th>address</th>
+                <th>ชื่อผู้เปิดรับบริจาค</th>
+                <th>ชนิด</th>
+                <th>จำนวน</th>
+                <th>เบอร์โทร</th>
+                <th>ที่อยู่</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +39,7 @@
             <form @submit.prevent="handleSubmit()" style="margin-left:50px">
                 <div class = "form-group row" style="margin-top:50px">
                     <div class="col-sm-2" >
-                        <label for="">Name</label>
+                        <label for="">ชื่อ</label>
                     </div>
                     
                     <div class="col-sm-10">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">Tel.</label>
+                    <label for="">เบอร์โทร</label>
                     </div>
 
                     <div class="col-sm-10">
@@ -58,11 +58,12 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">Type</label>
+                    <label for="">ชนิด</label>
                     </div>
 
                     <div class="col-sm-10">
-                    <select class="form-control" v-model="form.type">
+                        <select class="form-control" placeholder="Choose your type" v-model="form.type" >
+                        <option value="" selected disabled hidden>กรุณาเลือกประเภท</option>
                         <option>หน้ากากอนามัย</option>
                         <option>เสื้อผ้า</option>
                         <option>อาหาร</option>
@@ -73,7 +74,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">Volume</label>
+                    <label for="">จำนวน</label>
                     </div>
                     <div class="col-sm-10">
                     <input type="text" class="form-control"
@@ -82,7 +83,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">
-                        submit
+                        เสร็จสิ้น
                     </button>
                 </div>
             </form>
