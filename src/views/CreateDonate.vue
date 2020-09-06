@@ -88,16 +88,18 @@ export default {
     
         ...mapActions('alert', ['error', 'success']),
         handleSubmit(){
-            if (this.form.name && this.form.tel && this.form.type && this.form.volume && this.form.address){
+            if (this.form.name && this.form.tel && this.form.type && this.form.volume > 0 && this.form.address){
+
                 donateService.create(this.form).then((data) => {                 
                     router.push({ name: 'Donate' })
                     this.success('สำเร็จ')
+
 
                 }).catch(error => {
                     this.error(error.message)
                 })
             }else{
-                this.error("ใส่ให้ครบ")
+                this.error("ข้อมูลไม่ครบถ้วน หรือข้อมูลไม่ถูกต้อง")
             }
     
 
