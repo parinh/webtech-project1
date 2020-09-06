@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-      <div class="font-Iteim" id="table">
+      <div class="font-Item" id="table">
         <h1 class="text-center">ยอดคงเหลือคลัง</h1>
         <table class="table">
       <thead>
