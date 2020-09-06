@@ -1,7 +1,11 @@
 <template>
 <body  class="wallpaper" style="background-color: #A6ACAF; ">
   <div class="font-Mitr">
+<<<<<<< HEAD
       <h1 class="text-center">รายการผู้บริจาคสิ่งของ</h1>
+=======
+      <h1 class="text-center col mt-4 mb-4">รายการบริจาคสิ่งของ</h1>
+>>>>>>> d074550fe92965c8da3326b6283b94fec5c84fdc
       <div>
 
         <div>

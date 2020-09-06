@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
 <body style="background-color: #5DADE2; color: white;">
+=======
+<body>
+>>>>>>> d074550fe92965c8da3326b6283b94fec5c84fdc
     <section class="split-1 font-Mitr">
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">

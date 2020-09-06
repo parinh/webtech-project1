@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 <template >
 <body style="background-color:  #F4D03F;">
   <div class="container-fluid font-Mitr wallpaper" >
       <div class="font-Item" id="table">
         <h1 class="text-center">แสดงยอดคงเหลือที่ต้องการบริจาคของทุก type</h1>
         <table class="table" style="margin-top:30px">
+=======
+<template>
+  <div class="container-fluid">
+      <div id="table">
+        <h1 class="text-center col mt-4 mb-4">ยอดคงเหลือคลัง</h1>
+        <table class="table">
+>>>>>>> d074550fe92965c8da3326b6283b94fec5c84fdc
       <thead>
         <tr>
-          <th>name</th>
-          <th>volume</th>
+          <th>ชนิดสิ่งของ</th>
+          <th>จำนวนคงคลัง</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +33,7 @@
       </tbody>
     </table>
     </div>
+    <div style="color: red">**จำนวนติดลบ = จำนวนสิ่งของบริจาคที่ต้องการ</div>
   </div>
 </body>
 
@@ -48,11 +57,9 @@ created(){
     data.forEach( doc => {
       this.donatorList.push(doc.data())
     })
-
   })
         openingdonateCollection.orderBy('createdAt').get().then(data => {
           let dataSet = []
-
             data.forEach(doc =>{
                 let hasSet = dataSet.filter((item) => {
                   return item.name == doc.data().type;
@@ -66,11 +73,8 @@ created(){
                   let key = Object.keys(dataSet).filter((item) => {
                   return dataSet[item].name == doc.data().type;
                   })[0];
-
-
-                  dataSet[key].sumary = dataSet[key].sumary + doc.data().volume;
+                  dataSet[key].sumary = dataSet[key].sumary - doc.data().volume;
                 }
-
                 this.openingdonate.push({
                     id: doc.id,
                     ...doc.data()
@@ -81,24 +85,22 @@ created(){
              let key = Object.keys(dataSet).filter((item) => {
               return dataSet[item].name == list.type;
               })[0];
-            dataSet[key].sumary = (dataSet[key].sumary - list.volume);
+            dataSet[key].sumary = (dataSet[key].sumary + list.volume);
             
-
           })
           this.dataSummanry = dataSet;
-
-
         })
-
-
     },
     
 }
 </script>
 
 <style>
+<<<<<<< HEAD
 .wallpaper{
     height: 100vh;
 
 }
+=======
+>>>>>>> d074550fe92965c8da3326b6283b94fec5c84fdc
 </style>
