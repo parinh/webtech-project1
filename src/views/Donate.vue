@@ -1,10 +1,8 @@
 <template>
-  <div>
-      <h1>Donate List</h1>
-      <div>
-      
-    </div>
-    <table class="table">
+  <div class="container-fluid">
+      <div class="font-Itim" id="table">
+         <h1 class="text-center">Donate List</h1>
+        <table class="table">
       <thead>
         <tr>
           <th>name</th>
@@ -35,7 +33,7 @@
         </tr>
       </tbody>
     </table>
-      <h1>Donator</h1>
+      <h1 class="text-center">Donator</h1>
            <form @submit.prevent="handleSubmit()">
           <div class = "form-group row">
               <div class="col-sm-2">
@@ -90,6 +88,9 @@
           </div>
     </form>
 
+      
+    </div>
+    
   </div>
   
   

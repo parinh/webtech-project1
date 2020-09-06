@@ -69,10 +69,12 @@
 
 <script>
 import { donateService } from '../services/donate.service'
+
 import { mapActions } from 'vuex'
 import { router } from '../router'
 
 export default {
+    
     data(){
         return {
             form:{
@@ -87,12 +89,14 @@ export default {
     methods:{
     
         ...mapActions('alert', ['error', 'success']),
-        handleSubmit(){
+        handleSubmit(){  
             if (this.form.name && this.form.tel && this.form.type && this.form.volume && this.form.address){
                 donateService.create(this.form).then((data) => {                 
                     router.push({ name: 'Donate' })
                     this.success('สำเร็จ')
 
+                
+              
                 }).catch(error => {
                     this.error(error.message)
                 })

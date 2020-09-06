@@ -1,7 +1,10 @@
 <template>
   <div>
-      <h1>Donate Information</h1>
+      <h1 class="text-center">Donate Information</h1>
       <div>
+
+        <div>
+  </div>
       
     </div>
     <table class="table">
@@ -31,6 +34,7 @@
         </tr>
       </tbody>
     </table>
+    
   </div>
 </template>
 
@@ -41,6 +45,7 @@ export default {
     data() {
        return {
            donator: [],
+           
        } 
     },
     created(){
@@ -56,7 +61,9 @@ export default {
     },
     edit(){
 
-    }
+    },
+    
+    
 
 }
 

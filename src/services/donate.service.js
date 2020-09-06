@@ -1,5 +1,4 @@
 import {openingdonateCollection} from '../firebase'
-
 function create(data){
     return openingdonateCollection.add({
         name: data.name,
@@ -10,6 +9,8 @@ function create(data){
         createdAt: new Date()       
     })
 }
+
+
 
 
 
