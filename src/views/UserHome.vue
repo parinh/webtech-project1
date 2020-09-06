@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div font-Mitr>
       <h1 class="text-center col mt-4 mb-4">ยินดีต้อนรับ {{ user.displayName}}</h1>
 
       <div class="text-center">

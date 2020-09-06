@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-Mitr">
       <h1 class="text-center">Donate Information</h1>
       <div>
 
