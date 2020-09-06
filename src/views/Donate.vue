@@ -34,7 +34,7 @@
                 </tbody>
             </table>
           </div>
-        <div class="form-split" style="margin-left: 100px">
+        <div class="form-split font-Mitr" style="margin-left: 100px">
             <h1 style="margin-left:60px; margin-right:100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
             <form @submit.prevent="handleSubmit()">
                 <div class = "form-group row" style="margin-top:50px">
@@ -127,18 +127,22 @@ export default {
     methods:{
         ...mapActions('alert', ['error', 'success']),
         handleSubmit(){
-            
-                if (this.form.name && this.form.tel && this.form.type && this.form.volume){
-                    donatorService.create(this.form).then((data) => {                 
-                        router.push({ name: 'DonateStatus' })
-                        this.success('สำเร็จ')
+            if(this.form.volume < 0){
+                this.error("กรอกจำนวนมากกว่า 0 ขึ้นไป")
+            }
+            else if(this.form.volume > 1000){
+                this.error("บริจาคเกินจำนวน")
+            }
+            else if (this.form.name && this.form.tel && this.form.type && this.form.volume){
+                donatorService.create(this.form).then((data) => {                 
+                    router.push({ name: 'DonateStatus' })
+                    this.success('สำเร็จ')
 
-                    }).catch(error => {
-                        this.error(error.message)
-                    })
-                }
-            else{
-                this.error("กรุณากรอกข้อมูลให้ครบถ้วน")
+                }).catch(error => {
+                    this.error(error.message)
+                })
+            }else{
+                this.error("ใส่ให้ครบ")
             }
     
         }
