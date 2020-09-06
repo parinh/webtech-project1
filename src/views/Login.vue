@@ -1,6 +1,7 @@
 <template>
-  <div class="container font-Mitr">
-      <h1 class="text-center col mt-4 mb-4">เข้าสู่ระบบ</h1>
+<body style="background-color:  #AF7AC5;">
+  <div class="container font-Mitr wallpaper">
+      <h1 class="text-center" style="margin-top:0px">เข้าสู่ระบบ</h1>
 
       <form @submit.prevent="handleSubmit()">
 
@@ -34,13 +35,14 @@
             
             <div class="col-sm-10">
               <router-link :to="{name: 'Register'}"
-                    class="btn btn-link">
+                    class="btn btn-link" style="color: white;">
                     สมัครสมาชิก
               </router-link>
             </div>
           </div>
       </form>
   </div>
+</body>
 </template>
 
 <script>
@@ -76,5 +78,7 @@ export default {
 </script>
 
 <style>
-
+.wallpaper{
+    height: 100vh;
+}
 </style>

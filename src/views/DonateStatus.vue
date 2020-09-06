@@ -1,6 +1,7 @@
 <template>
+<body  class="wallpaper" style="background-color: #A6ACAF; ">
   <div class="font-Mitr">
-      <h1 class="text-center col mt-4 mb-4">รายการบริจาคสิ่งของ</h1>
+      <h1 class="text-center">รายการผู้บริจาคสิ่งของ</h1>
       <div>
 
         <div>
@@ -36,6 +37,7 @@
     </table>
     
   </div>
+  </body>
 </template>
 
 <script>

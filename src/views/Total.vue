@@ -1,8 +1,9 @@
-<template>
-  <div class="container-fluid">
-      <div id="table">
-        <h1 class="text-center col mt-4 mb-4">ยอดคงเหลือคลัง</h1>
-        <table class="table">
+<template >
+<body style="background-color:  #F4D03F;">
+  <div class="container-fluid font-Mitr wallpaper" >
+      <div class="font-Item" id="table">
+        <h1 class="text-center">แสดงยอดคงเหลือที่ต้องการบริจาคของทุก type</h1>
+        <table class="table" style="margin-top:30px">
       <thead>
         <tr>
           <th>ชนิดสิ่งของ</th>
@@ -26,7 +27,7 @@
     </div>
     <div style="color: red">**จำนวนติดลบ = จำนวนสิ่งของบริจาคที่ต้องการ</div>
   </div>
-  
+</body>
 
 
 </template>
@@ -87,4 +88,8 @@ created(){
 </script>
 
 <style>
+.wallpaper{
+    height: 100vh;
+
+}
 </style>
