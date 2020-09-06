@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
-      <div class="font-Item" id="table">
+      <div id="table">
         <h1 class="text-center col mt-4 mb-4">ยอดคงเหลือคลัง</h1>
         <table class="table">
       <thead>
         <tr>
-          <th>name</th>
-          <th>volume</th>
+          <th>ชนิดสิ่งของ</th>
+          <th>จำนวนคงคลัง</th>
         </tr>
       </thead>
       <tbody>
