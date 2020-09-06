@@ -1,13 +1,14 @@
 <template>
-    <div font-Mitr>
-      <h1 class="text-center col mt-4 mb-4">ยินดีต้อนรับ {{ user.displayName}}</h1>
+<body class="wallpaper" style="background-color: #2ECC71;">
+    <div class="font-Mitr">
+      <h1 class="text-center">ยินดีต้อนรับ {{ user.displayName}}</h1>
 
       <div class="text-center">
   <router-link to="/DonateStatus"><button  type="button" class="btn btn-primary ">ตรวจสอบสถานะบริจาค</button></router-link>
   <router-link to="/CreateDonate"><button type="button" class="btn btn-danger">กรอกฟอร์มเปิดรับบริจาค</button></router-link>
   </div>
     </div>
-
+</body>
     
 </template>
 
@@ -21,5 +22,8 @@ export default {
 </script>
 
 <style>
+.wallpaper{
+    height: 100vh;
 
+}
 </style>

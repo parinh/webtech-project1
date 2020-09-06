@@ -1,6 +1,7 @@
-<template>
-  <div class="container-fluid font-Mitr">
-      <div class="font-Item" id="table" style="margin-top: 30px">
+<template >
+<body style="background-color:  #F4D03F;">
+  <div class="container-fluid font-Mitr wallpaper" >
+      <div class="font-Item" id="table">
         <h1 class="text-center">แสดงยอดคงเหลือที่ต้องการบริจาคของทุก type</h1>
         <table class="table" style="margin-top:30px">
       <thead>
@@ -25,7 +26,7 @@
     </table>
     </div>
   </div>
-  
+</body>
 
 
 </template>
@@ -96,5 +97,8 @@ created(){
 </script>
 
 <style>
+.wallpaper{
+    height: 100vh;
 
+}
 </style>

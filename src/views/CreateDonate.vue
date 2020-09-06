@@ -1,6 +1,7 @@
 <template>
+<body  class="wallpaper" style="background-color: #F39C12; ">
 <div class="container font-Mitr">
-    <h1 class="text-center col mt-4 mb-4">ฟอร์มกรอก เปิดรับบริจาค</h1>
+    <h1 class="text-center">ฟอร์มกรอก เปิดรับบริจาค</h1>
 
      <form @submit.prevent="handleSubmit()">
           <div class = "form-group row">
@@ -60,12 +61,13 @@
               </div>  
           </div>
           <div class="form-group">
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn btn-primary" style="margin-top:30px; margin-left:500px">
                   เสร็จสิ้น
               </button>
           </div>
     </form>
 </div>
+</body>
 </template>
 
 <script>

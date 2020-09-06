@@ -1,14 +1,10 @@
 <template>
-<body>
-<<<<<<< HEAD
+<body style="background-color: #5DADE2; color: white;">
     <section class="split-1 font-Mitr">
-=======
-    <section class="split-1" >
->>>>>>> e641f3691dac5767e197ce86f86e6a731b1b406d
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">
             <thead>
-                <tr>
+                <tr style="text-align:center;">
                 <th>ชื่อผู้เปิดรับบริจาค</th>
                 <th>ชนิด</th>
                 <th>จำนวน</th>
@@ -39,7 +35,7 @@
             </table>
           </div>
         <div class="form-split" style="margin-left: 100px">
-            <h1 style="margin-left:60px; margin-right:100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
+            <h1 style="margin-top: 50px; margin-left:60px; margin-right:100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
             <form @submit.prevent="handleSubmit()">
                 <div class = "form-group row" style="margin-top:50px">
                     <div class="col-sm-2" >
@@ -156,11 +152,7 @@ export default {
 </script>
 
 <style>
-body {
-  background-color: coral;
-}
 .split-1{
-    margin-top:30px;
     height: 100vh;
     display: flex;
 }
@@ -172,7 +164,6 @@ body {
 }
 
 .form-spilt{
-    background-color: coral;
     margin-left:200px;
     width: 50%;
 }
