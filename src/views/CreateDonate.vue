@@ -86,6 +86,7 @@ export default {
             }
         }
     },
+<<<<<<< HEAD
     methods:{
     
         ...mapActions('alert', ['error', 'success']),
@@ -104,9 +105,9 @@ export default {
                 this.error("ข้อมูลไม่ครบถ้วน หรือข้อมูลไม่ถูกต้อง")
             }
     
+=======
+>>>>>>> eeeb4afbcbd306be76735519ea9cb13c9318d22e
 
-        }
-    }
 }
     
 </script>
