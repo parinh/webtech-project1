@@ -11,19 +11,19 @@
         <router-link to="/" class="nav-link">Home</router-link>
       </li>
       <li class="nav-item active">
-        <router-link to="/Donate" class="nav-link">Donate List</router-link>
+        <router-link to="/Donate" class="nav-link">รายการเปิดรับบริจาค</router-link>
       </li>
       <li class="nav-item active">
-        <router-link to="/Total" class="nav-link">Total</router-link>
+        <router-link to="/Total" class="nav-link">คลังของบริจาค</router-link>
       </li>
       <li class="nav-item" v-if="user">
-        <router-link to="/UserHome" class="nav-link">UserHome</router-link>
+        <router-link to="/UserHome" class="nav-link">เมนู</router-link>
       </li>
       <li class="nav-item" v-if="user"> 
-        <router-link to="/logout" class="nav-link">Logout</router-link>
+        <router-link to="/logout" class="nav-link">ออกจากระบบ</router-link>
       </li>
       <li class="nav-item" v-if="!user">
-        <router-link to="/login" class="nav-link">Login</router-link>
+        <router-link to="/login" class="nav-link">เข้าสู่ระบบ</router-link>
       </li>
 
     </ul>
