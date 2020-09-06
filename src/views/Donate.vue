@@ -1,6 +1,10 @@
 <template>
 <body>
+<<<<<<< HEAD
     <section class="split-1 font-Mitr">
+=======
+    <section class="split-1" >
+>>>>>>> e641f3691dac5767e197ce86f86e6a731b1b406d
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">
             <thead>
