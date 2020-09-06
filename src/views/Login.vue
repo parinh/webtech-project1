@@ -65,7 +65,7 @@ export default {
                 this.login(this.form) // เรียกให้ไป login ที่ account module โดยส่งข้อมูล form ไปปป ส่งค่าเดียวเพราะมันส่งเป็น object
             }
             else{
-                this.error('ใส่ให้ครบ')
+                this.error('กรุณากรอกข้อมูลให้ครบถ้วน')
                 
             }
             

@@ -66,8 +66,7 @@ created(){
                   return dataSet[item].name == doc.data().type;
                   })[0];
 
-
-                  dataSet[key].sumary = dataSet[key].sumary + doc.data().volume;
+                  dataSet[key].sumary = dataSet[key].sumary - doc.data().volume;
                 }
 
                 this.openingdonate.push({
@@ -76,13 +75,14 @@ created(){
                 })
                 
             })
+
           this.donatorList.forEach((list) => {
              let key = Object.keys(dataSet).filter((item) => {
               return dataSet[item].name == list.type;
               })[0];
-            dataSet[key].sumary = (dataSet[key].sumary - list.volume);
             
-
+            dataSet[key].sumary = (dataSet[key].sumary + list.volume)        
+        
           })
           this.dataSummanry = dataSet;
 

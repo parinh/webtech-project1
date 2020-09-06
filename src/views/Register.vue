@@ -74,7 +74,7 @@ export default {
             if (this.form.email && this.form.password && this.form.displayName && this.form.phoneNumber){
                 this.register(this.form)
             }else{
-                this.error("ใส่ให้ครบ")
+                this.error("กรุณากรอกข้อมูลให้ครบถ้วน")
             }
     
 

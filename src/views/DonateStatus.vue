@@ -49,7 +49,7 @@ export default {
        } 
     },
     created(){
-        donatorCollection.orderBy('createdAt').get().then(data => {
+        donatorCollection.orderBy('createdAt','desc').get().then(data => {
             data.forEach(doc =>{
                 console.log(doc.id, " => ", doc.data());
                 this.donator.push({

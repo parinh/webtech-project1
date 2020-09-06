@@ -104,6 +104,7 @@ import { mapActions } from 'vuex'
 import { router } from '../router'
 
 export default {
+
     data() {
        return {
            openingdonate: [],
@@ -117,7 +118,7 @@ export default {
         }
     },
     created(){
-        openingdonateCollection.orderBy('createdAt').get().then(data => {
+        openingdonateCollection.orderBy('createdAt','desc').get().then(data => {
             data.forEach(doc =>{
                 this.openingdonate.push({
                     id: doc.id,
@@ -130,19 +131,20 @@ export default {
     methods:{
         ...mapActions('alert', ['error', 'success']),
         handleSubmit(){
-            if (this.form.name && this.form.tel && this.form.type && this.form.volume){
-                donatorService.create(this.form).then((data) => {                 
-                    router.push({ name: 'DonateStatus' })
-                    this.success('สำเร็จ')
+            
+                if (this.form.name && this.form.tel && this.form.type && this.form.volume){
+                    donatorService.create(this.form).then((data) => {                 
+                        router.push({ name: 'DonateStatus' })
+                        this.success('สำเร็จ')
 
-                }).catch(error => {
-                    this.error(error.message)
-                })
-            }else{
-                this.error("ใส่ให้ครบ")
+                    }).catch(error => {
+                        this.error(error.message)
+                    })
+                }
+            else{
+                this.error("กรุณากรอกข้อมูลให้ครบถ้วน")
             }
     
-
         }
     },
     edit(){
