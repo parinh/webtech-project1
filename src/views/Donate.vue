@@ -1,6 +1,6 @@
 <template>
-    </div>
-        <section class="split-1">
+<body>
+    <section class="split-1" >
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">
             <thead>
@@ -35,7 +35,7 @@
             </table>
           </div>
         <div class="form-split">
-            <h1 style="margin-top: 50px margin-left:300px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
+            <h1 style="margin: 50px margin-left: 100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
             <form @submit.prevent="handleSubmit()" style="margin-left:50px">
                 <div class = "form-group row" style="margin-top:50px">
                     <div class="col-sm-2" >
@@ -43,8 +43,7 @@
                     </div>
                     
                     <div class="col-sm-10">
-                        <input type="text" class="form-control"
-                                placeholder="Your Name" v-model="form.name">
+                        <input type="text" class="form-control"  v-model="form.name">
                     </div>   
                 </div>
                 <div class="form-group row">
@@ -76,8 +75,7 @@
                     <label for="">Volume</label>
                     </div>
                     <div class="col-sm-10">
-                    <input type="text" class="form-control"
-                        placeholder="Enter Volume" v-model="form.volume">
+                    <input type="text" class="form-control" v-model="form.volume">
                     </div>  
                 </div>
                 <div class="form-group">
@@ -88,8 +86,7 @@
             </form>
         </div>
     </section>
-  </div>
-  
+</body>
   
 </template>
 
@@ -152,6 +149,9 @@ export default {
 </script>
 
 <style>
+.body{
+    background-color: tomato;
+}
 .split-1{
     margin-top:30px;
     height: 100vh;
