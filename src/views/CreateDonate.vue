@@ -86,37 +86,7 @@ export default {
             }
         }
     },
-    methods:{
-    
-        ...mapActions('alert', ['error', 'success']),
-<<<<<<< HEAD
-        handleSubmit(){
-            if (this.form.name && this.form.tel && this.form.type && this.form.volume > 0 && this.form.address){
 
-=======
-        handleSubmit(){  
-            if (this.form.name && this.form.tel && this.form.type && this.form.volume && this.form.address){
->>>>>>> 3047d9b6dcdf963417451ecbc7d98d13cd723122
-                donateService.create(this.form).then((data) => {                 
-                    router.push({ name: 'Donate' })
-                    this.success('สำเร็จ')
-
-<<<<<<< HEAD
-
-=======
-                
-              
->>>>>>> 3047d9b6dcdf963417451ecbc7d98d13cd723122
-                }).catch(error => {
-                    this.error(error.message)
-                })
-            }else{
-                this.error("ข้อมูลไม่ครบถ้วน หรือข้อมูลไม่ถูกต้อง")
-            }
-    
-
-        }
-    }
 }
 </script>
 

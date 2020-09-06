@@ -2,7 +2,6 @@
   <div>
       <nav class="navbar navbar-expand navbar-light bg-light">
   <a class="navbar-brand" href="#">
-      <img src="../assets/logo.png" width="30">
   </a>
 
 
