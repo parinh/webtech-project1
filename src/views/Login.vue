@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container font-Mitr">
       <h1 class="text-center col mt-4 mb-4">เข้าสู่ระบบ</h1>
 
       <form @submit.prevent="handleSubmit()">

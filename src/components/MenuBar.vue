@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-Mitr">
       <nav class="navbar navbar-expand navbar-light bg-light">
   <a class="navbar-brand" href="#">
   </a>

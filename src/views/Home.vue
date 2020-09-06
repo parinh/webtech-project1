@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="font-Mitr">
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -26,10 +26,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-  <div class="text-center" style="margin-top:30px">
+  <div class="text-center" style="margin-top:20px">
   <router-link to="/UserHome"><button v-if="user" type="button" class="btn btn-primary">เปิดขอรับบริจาค</button></router-link>
-  <router-link to="/Login"><button v-if="!user" type="button" class="btn btn-primary">เปิดขอรับบริจาค</button></router-link>
-  <router-link to="/Donate"><button type="button" class="btn btn-danger">บริจาคสิ่งของ</button></router-link>
+  <router-link to="/Login"><button v-if="!user" type="button" class="btn btn-primary btn-lg" style="margin-right:100px">เปิดขอรับบริจาค</button></router-link>
+  <router-link to="/Donate"><button type="button" class="btn btn-danger btn-lg">บริจาคสิ่งของ</button></router-link>
   </div>
 </div>
 

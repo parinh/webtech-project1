@@ -1,6 +1,6 @@
 <template>
 <body>
-    <section class="split-1" >
+    <section class="split-1 font-Mitr">
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">
             <thead>
@@ -34,9 +34,9 @@
                 </tbody>
             </table>
           </div>
-        <div class="form-split">
-            <h1 style="margin: 50px margin-left: 100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
-            <form @submit.prevent="handleSubmit()" style="margin-left:50px">
+        <div class="form-split" style="margin-left: 100px">
+            <h1 style="margin-left:60px; margin-right:100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
+            <form @submit.prevent="handleSubmit()">
                 <div class = "form-group row" style="margin-top:50px">
                     <div class="col-sm-2" >
                         <label for="">ชื่อ</label>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">เบอร์โทร</label>
+                    <label for="">เบอร์</label>
                     </div>
 
                     <div class="col-sm-10">
@@ -79,7 +79,7 @@
                     <input type="text" class="form-control" v-model="form.volume">
                     </div>  
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-left:250px">
                     <button type="submit" class="btn btn-primary">
                         เสร็จสิ้น
                     </button>
@@ -152,8 +152,8 @@ export default {
 </script>
 
 <style>
-.body{
-    background-color: tomato;
+body {
+  background-color: coral;
 }
 .split-1{
     margin-top:30px;
@@ -168,9 +168,11 @@ export default {
 }
 
 .form-spilt{
+    background-color: coral;
     margin-left:200px;
     width: 50%;
 }
+
 
 
 </style>
