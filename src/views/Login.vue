@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-      <h1 class="text-center col mt-4 mb-4">Login</h1>
+      <h1 class="text-center col mt-4 mb-4">เข้าสู่ระบบ</h1>
 
       <form @submit.prevent="handleSubmit()">
 
         
           <div class = "form-group row">
               <div class="col-sm-2">
-              <label for="">Email Address * </label>
+              <label for="">อีเมล * </label>
               </div>
             
             <div class="col-sm-10">
@@ -18,7 +18,7 @@
 
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">Password * </label>
+              <label for="">รหัสผ่าน * </label>
               </div>
 
               <div class="col-sm-10">
@@ -29,13 +29,13 @@
 
           <div class="form group row">
               <div class="col-sm-2">
-              <button class="btn btn-primary">Login</button>
+              <button class="btn btn-primary">เข้าสู่ระบบ</button>
               </div>
             
             <div class="col-sm-10">
               <router-link :to="{name: 'Register'}"
                     class="btn btn-link">
-                    Register
+                    สมัครสมาชิก
               </router-link>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default {
                 this.login(this.form) // เรียกให้ไป login ที่ account module โดยส่งข้อมูล form ไปปป ส่งค่าเดียวเพราะมันส่งเป็น object
             }
             else{
-                this.error('ใส่ให้ครบ')
+                this.error('กรุณากรอกข้อมูลให้ครบถ้วน')
                 
             }
             

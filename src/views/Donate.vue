@@ -1,15 +1,20 @@
 <template>
+<<<<<<< HEAD
 <body>
     <section class="split-1" >
+=======
+    <div>
+        <section class="split-1">
+>>>>>>> d85662bc316a6a0ea6d4f4ac11216d5386a189e1
           <div class="table-split">
             <table class="table table-bordered" style="margin:30px">
             <thead>
                 <tr>
-                <th>name</th>
-                <th>type</th>
-                <th>volume</th>
-                <th>phone number</th>
-                <th>address</th>
+                <th>ชื่อผู้เปิดรับบริจาค</th>
+                <th>ชนิด</th>
+                <th>จำนวน</th>
+                <th>เบอร์โทร</th>
+                <th>ที่อยู่</th>
                 </tr>
             </thead>
             <tbody>
@@ -39,7 +44,7 @@
             <form @submit.prevent="handleSubmit()" style="margin-left:50px">
                 <div class = "form-group row" style="margin-top:50px">
                     <div class="col-sm-2" >
-                        <label for="">Name</label>
+                        <label for="">ชื่อ</label>
                     </div>
                     
                     <div class="col-sm-10">
@@ -48,7 +53,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">Tel.</label>
+                    <label for="">เบอร์โทร</label>
                     </div>
 
                     <div class="col-sm-10">
@@ -57,11 +62,12 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">Type</label>
+                    <label for="">ชนิด</label>
                     </div>
 
                     <div class="col-sm-10">
-                    <select class="form-control" v-model="form.type">
+                        <select class="form-control" placeholder="Choose your type" v-model="form.type" >
+                        <option value="" selected disabled hidden>กรุณาเลือกประเภท</option>
                         <option>หน้ากากอนามัย</option>
                         <option>เสื้อผ้า</option>
                         <option>อาหาร</option>
@@ -72,7 +78,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-2">
-                    <label for="">Volume</label>
+                    <label for="">จำนวน</label>
                     </div>
                     <div class="col-sm-10">
                     <input type="text" class="form-control" v-model="form.volume">
@@ -80,7 +86,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">
-                        submit
+                        เสร็จสิ้น
                     </button>
                 </div>
             </form>
@@ -98,6 +104,7 @@ import { mapActions } from 'vuex'
 import { router } from '../router'
 
 export default {
+
     data() {
        return {
            openingdonate: [],
@@ -111,7 +118,7 @@ export default {
         }
     },
     created(){
-        openingdonateCollection.orderBy('createdAt').get().then(data => {
+        openingdonateCollection.orderBy('createdAt','desc').get().then(data => {
             data.forEach(doc =>{
                 console.log(doc.id, " => ", doc.data());
                 this.openingdonate.push({
@@ -125,19 +132,20 @@ export default {
     methods:{
         ...mapActions('alert', ['error', 'success']),
         handleSubmit(){
-            if (this.form.name && this.form.tel && this.form.type && this.form.volume){
-                donatorService.create(this.form).then((data) => {                 
-                    router.push({ name: 'DonateStatus' })
-                    this.success('สำเร็จ')
+            
+                if (this.form.name && this.form.tel && this.form.type && this.form.volume){
+                    donatorService.create(this.form).then((data) => {                 
+                        router.push({ name: 'DonateStatus' })
+                        this.success('สำเร็จ')
 
-                }).catch(error => {
-                    this.error(error.message)
-                })
-            }else{
-                this.error("ใส่ให้ครบ")
+                    }).catch(error => {
+                        this.error(error.message)
+                    })
+                }
+            else{
+                this.error("กรุณากรอกข้อมูลให้ครบถ้วน")
             }
     
-
         }
     },
     edit(){

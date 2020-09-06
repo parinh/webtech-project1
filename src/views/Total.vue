@@ -1,12 +1,12 @@
 <template>
   <div class="container-fluid">
-      <div class="font-Itim" id="table">
-        <h1 class="text-center">แสดงยอดคงเหลือที่ต้องการบริจาคของทุก type</h1>
+      <div class="font-Iteim" id="table">
+        <h1 class="text-center">ยอดคงเหลือคลัง</h1>
         <table class="table">
       <thead>
         <tr>
-          <th>name</th>
-          <th>volume</th>
+          <th>ชนิดสิ่งของ</th>
+          <th>จำนวน</th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +24,7 @@
       </tbody>
     </table>
     </div>
+<div style="color: red">**จำนวนติดลบ = ยอดจำนวนบริจาคที่ต้องการ</div>
   </div>
   
 
@@ -66,8 +67,7 @@ created(){
                   return dataSet[item].name == doc.data().type;
                   })[0];
 
-
-                  dataSet[key].sumary = dataSet[key].sumary + doc.data().volume;
+                  dataSet[key].sumary = dataSet[key].sumary - doc.data().volume;
                 }
 
                 this.openingdonate.push({
@@ -76,13 +76,14 @@ created(){
                 })
                 
             })
+
           this.donatorList.forEach((list) => {
              let key = Object.keys(dataSet).filter((item) => {
               return dataSet[item].name == list.type;
               })[0];
-            dataSet[key].sumary = (dataSet[key].sumary - list.volume);
             
-
+            dataSet[key].sumary = (dataSet[key].sumary + list.volume)        
+        
           })
           this.dataSummanry = dataSet;
 
