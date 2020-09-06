@@ -1,11 +1,11 @@
-import {openingdonateCollection} from '../firebase'
+import {donatorCollection} from '../firebase'
+
 function create(data){
-    return openingdonateCollection.add({
+    return donatorCollection.add({
         name: data.name,
         tel: data.tel,
         type: data.type,
         volume: parseInt(data.volume),
-        address: data.address,
         createdAt: new Date()       
     })
 }
@@ -13,8 +13,6 @@ function create(data){
 
 
 
-
-
-export const donateService = {
+export const donatorService = {
   create,
 }
