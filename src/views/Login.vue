@@ -1,7 +1,9 @@
 <template>
 <body style="background-color:  #AF7AC5;">
   <div class="container font-Mitr wallpaper">
-      <h1 class="text-center" style="margin-top:0px">เข้าสู่ระบบ</h1>
+      <br>
+      <h1 class="text-center col  mb-4" style="color: white" >เข้าสู่ระบบ</h1>
+      <br>
 
       <form @submit.prevent="handleSubmit()">
 
@@ -11,8 +13,8 @@
               <label for="">อีเมล * </label>
               </div>
             
-            <div class="col-sm-10">
-              <input type="text" class="form-control"
+            <div class="col-sm-5">
+              <input type="text" class="form-control" 
                 placeholder="Your Email" v-model="form.email">
           </div>
           </div>
@@ -22,18 +24,19 @@
               <label for="">รหัสผ่าน * </label>
               </div>
 
-              <div class="col-sm-10">
+              <div class="col-sm-5">
               <input type="password" class="form-control"
                 placeholder="Your Password" v-model="form.password">
           </div>
           </div>
+          <br>
 
           <div class="form group row">
               <div class="col-sm-2">
               <button class="btn btn-primary">เข้าสู่ระบบ</button>
               </div>
             
-            <div class="col-sm-10">
+            <div class="col-sm-5">
               <router-link :to="{name: 'Register'}"
                     class="btn btn-link" style="color: white;">
                     สมัครสมาชิก

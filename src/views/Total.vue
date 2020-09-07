@@ -1,27 +1,31 @@
 <template >
 <body style="background-color:  #F4D03F;">
-  <div class="container-fluid font-Mitr wallpaper" >
+  <div class="container container-fluid font-Mitr wallpaper" >
       <div class="font-Item" id="table">
-        <h1 class="text-center">แสดงยอดคงเหลือที่ต้องการบริจาคของทุก type</h1>
-        <table class="table" style="margin-top:30px">
+        <br>
+        <h1 class="text-center col mb-4">ยอดคงเหลือคลัง/ยอดความต้องการ</h1>
+
+        <table class="table" style="margin-top:30px; margin-right:auto">
       <thead>
-        <tr>
+        <tr style="background-color:pink">
           <th>ชนิดสิ่งของ</th>
           <th>จำนวนคงคลัง</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody style="background-color:white">
+        
         <tr v-for="donate in dataSummanry" :key="donate">
           <td>
-            {{donate.name}}
+            <p class="font-weight-bolder" style="font-size: 40px">{{donate.name}}</p>
           </td>
           
           <td>
-              {{ donate.sumary }}
+              <p class="font-weight-bolder" style="color: blue;font-size: 40px">{{ donate.sumary }}</p>
           </td>
           
           
         </tr>
+  
       </tbody>
     </table>
     </div>

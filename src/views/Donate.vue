@@ -2,9 +2,9 @@
 <body style="background-color: #5DADE2; color: white;">
     <section class="split-1 font-Mitr">
           <div class="table-split">
-            <table class="table table-bordered" style="margin:30px">
+            <table class="table table-bordered " style="margin:30px;">
             <thead>
-                <tr style="text-align:center;">
+                <tr style="text-align:center; background-color: #ffffb3">
                 <th>ชื่อผู้เปิดรับบริจาค</th>
                 <th>ชนิด</th>
                 <th>จำนวน</th>
@@ -13,7 +13,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="donate in openingdonate" :key="donate">
+                <tr v-for="donate in openingdonate" :key="donate" style="background-color: white">
                 <td>
                     {{ donate.name }}
                 </td>
@@ -35,15 +35,15 @@
             </table>
           </div>
         <div class="form-split" style="margin-left: 100px">
-            <h1 style="margin-top: 50px; margin-left:60px; margin-right:100px">แบบฟอร์มรับบริจาคสิ่งของ</h1>
+            <h1 class="text-center col mt-4 mb-4">ฟอร์มบริจาคสิ่งของ</h1>
             <form @submit.prevent="handleSubmit()">
                 <div class = "form-group row" style="margin-top:50px">
                     <div class="col-sm-2" >
-                        <label for="">ชื่อ</label>
+                        <label for="" >ชื่อ</label>
                     </div>
                     
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control"  v-model="form.name">
+                    <div class="col-sm-9">
+                        <input placeholder="ชื่อผู้บริจาค" type="text" class="form-control"  v-model="form.name">
                     </div>   
                 </div>
                 <div class="form-group row">
@@ -51,8 +51,8 @@
                     <label for="">เบอร์</label>
                     </div>
 
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control" v-model="form.tel">
+                    <div class="col-sm-9">
+                    <input placeholder="เบอร์โทร" type="text" class="form-control" v-model="form.tel">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -60,7 +60,7 @@
                     <label for="">ชนิด</label>
                     </div>
 
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                         <select class="form-control" placeholder="Choose your type" v-model="form.type" >
                         <option value="" selected disabled hidden>กรุณาเลือกประเภท</option>
                         <option>หน้ากากอนามัย</option>
@@ -75,12 +75,12 @@
                     <div class="col-sm-2">
                     <label for="">จำนวน</label>
                     </div>
-                    <div class="col-sm-10">
-                    <input type="text" class="form-control" v-model="form.volume">
+                    <div class="col-sm-9">
+                    <input placeholder="จำนวนที่บริจาค" type="text" class="form-control" v-model="form.volume">
                     </div>  
                 </div>
                 <div class="form-group" style="margin-left:250px">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-success">
                         เสร็จสิ้น
                     </button>
                 </div>
@@ -127,13 +127,8 @@ export default {
     methods:{
         ...mapActions('alert', ['error', 'success']),
         handleSubmit(){
-            if(this.form.volume < 0){
-                this.error("กรอกจำนวนมากกว่า 0 ขึ้นไป")
-            }
-            else if(this.form.volume > 1000){
-                this.error("บริจาคเกินจำนวน")
-            }
-            else if (this.form.name && this.form.tel && this.form.type && this.form.volume){
+
+            if (this.form.name && this.form.tel && this.form.type && this.form.volume){
                 donatorService.create(this.form).then((data) => {                 
                     router.push({ name: 'DonateStatus' })
                     this.success('สำเร็จ')
@@ -142,7 +137,7 @@ export default {
                     this.error(error.message)
                 })
             }else{
-                this.error("ใส่ให้ครบ")
+                this.error("ข้อมูลไม่ครบถ้วน หรือข้อมูลไม่ถูกต้อง")
             }
     
         }

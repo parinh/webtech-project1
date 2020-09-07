@@ -10,17 +10,17 @@
       <li class="nav-item active">
         <router-link to="/" class="nav-link">Home</router-link>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <router-link to="/Donate" class="nav-link">รายการเปิดรับบริจาค</router-link>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <router-link to="/Total" class="nav-link">คลังของบริจาค</router-link>
       </li>
       <li class="nav-item" v-if="user">
         <router-link to="/UserHome" class="nav-link">เมนู</router-link>
       </li>
       <li class="nav-item" v-if="user"> 
-        <router-link to="/logout" class="nav-link">ออกจากระบบ</router-link>
+        <router-link to="/logout" class="nav-link" style="color: red">ออกจากระบบ</router-link>
       </li>
       <li class="nav-item" v-if="!user">
         <router-link to="/login" class="nav-link">เข้าสู่ระบบ</router-link>

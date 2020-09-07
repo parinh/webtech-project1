@@ -1,11 +1,16 @@
 <template>
-<body class="wallpaper" style="background-color: #2ECC71;">
+<body class="wallpaper" style="background-color: #77dd77 ;">
     <div class="font-Mitr">
-      <h1 class="text-center">ยินดีต้อนรับ {{ user.displayName}}</h1>
+      <br>
+      <h1 class="text-center col mb-4" >ยินดีต้อนรับ {{ user.displayName}}</h1>
+      <h1 class="text-center col mb-4" style="color:#dd7777">กรุณาเลือกเมนูถัดไป...</h1>
 
-      <div class="text-center">
-  <router-link to="/DonateStatus"><button  type="button" class="btn btn-primary ">ตรวจสอบสถานะบริจาค</button></router-link>
-  <router-link to="/CreateDonate"><button type="button" class="btn btn-danger">กรอกฟอร์มเปิดรับบริจาค</button></router-link>
+
+      <div class="text-center" style="margin-top:20px">
+        <br>
+  <router-link to="/DonateStatus"><button  type="button" class="btn btn-primary btn-lg " style="margin-right:50px">ตรวจสอบสถานะบริจาค</button></router-link>
+  <router-link to="/CreateDonate"><button type="button" class="btn btn-danger btn-lg" >กรอกฟอร์มเปิดรับบริจาค</button></router-link>
+      
   </div>
     </div>
 </body>

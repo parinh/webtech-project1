@@ -1,7 +1,9 @@
 <template>
 <body  class="wallpaper" style="background-color: #F39C12; ">
 <div class="container font-Mitr">
+    <br>
     <h1 class="text-center">ฟอร์มกรอก เปิดรับบริจาค</h1>
+    <br>
 
      <form @submit.prevent="handleSubmit()">
           <div class = "form-group row">
@@ -11,7 +13,7 @@
               
               <div class="col-sm-10">
                   <input type="text" class="form-control"
-                        placeholder="Your Name" v-model="form.name">
+                        placeholder="ชื่อผู้เปิดขอรับบริจาค" v-model="form.name">
               </div>   
           </div>
 
@@ -23,7 +25,7 @@
 
               <div class="col-sm-10">
               <input type="text" class="form-control"
-                    placeholder="Your Phone Number" v-model="form.tel">
+                    placeholder="เบอร์โทรที่สามารถติดต่อได้" v-model="form.tel">
               </div>
           </div>
           <div class="form-group row">
@@ -32,10 +34,10 @@
               </div>
 
               <div class="col-sm-10">
-                <select class="form-control" placeholder="Choose your type" v-model="form.type" >
+                <select class="form-control" placeholder="ชนิดสิ่งของที่รับบริจาค" v-model="form.type" >
                 <option value="" selected disabled hidden>กรุณาเลือกประเภท</option>
                 <option>หน้ากากอนามัย</option>
-                <option>เสื้อผ้า</option>
+                <option>เสื้อผ้า </option>
                 <option>อาหาร</option>
                 <option>น้ำ</option>
                 <option>เวชภัณฑ์</option>
@@ -44,24 +46,24 @@
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">จำนวน</label>
+              <label for="">จำนวน *</label>
               </div>
               <div class="col-sm-10">
               <input type="text" class="form-control"
-                placeholder="Enter Volume" v-model="form.volume">
+                placeholder="จำนวนสิ่งของ" v-model="form.volume">
               </div>  
           </div>
           <div class="form-group row">
               <div class="col-sm-2">
-              <label for="">ที่อยู่</label>
+              <label for="">ที่อยู่ *</label>
               </div>
               <div class="col-sm-10">
               <input type="text" class="form-control"
-                placeholder="Enter Address" v-model="form.address">
+                placeholder="ที่อยู่คร่าวๆ" v-model="form.address">
               </div>  
           </div>
           <div class="form-group">
-              <button type="submit" class="btn btn-primary" style="margin-top:30px; margin-left:500px">
+              <button type="submit" class="btn btn-success" style="margin-top:30px; margin-left:500px">
                   เสร็จสิ้น
               </button>
           </div>
@@ -93,7 +95,7 @@ export default {
         handleSubmit(){  
             if (this.form.name && this.form.tel && this.form.type && this.form.volume && this.form.address){
                 donateService.create(this.form).then((data) => {                 
-                    router.push({ name: 'Donate' })
+                    router.push({ name: 'Total' })
                     this.success('สำเร็จ')
                 }).catch(error => {
                     this.error(error.message)
