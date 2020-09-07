@@ -130,7 +130,7 @@ export default {
 
             if (this.form.name && this.form.tel && this.form.type && this.form.volume){
                 donatorService.create(this.form).then((data) => {                 
-                    router.push({ name: 'DonateStatus' })
+                    router.push({ name: 'Total' })
                     this.success('สำเร็จ')
 
                 }).catch(error => {
